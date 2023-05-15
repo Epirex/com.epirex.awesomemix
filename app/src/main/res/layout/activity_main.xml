@@ -13,13 +13,10 @@
         android:orientation="vertical"
         android:layout_gravity="top">
 
-        <ImageView
-            android:id="@+id/album_image"
+        <VideoView
+            android:id="@+id/videoView"
             android:layout_width="match_parent"
-            android:layout_height="416dp"
-            android:layout_gravity="top"
-            android:src="@drawable/cassete" />
-
+            android:layout_height="250dp" />
 
         <Button
             android:id="@+id/buttonPlay"

@@ -3,10 +3,12 @@ package com.epirex.awesomemix
 import android.content.Context
 import android.media.AudioManager
 import android.media.MediaPlayer
+import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.Toast
+import android.widget.VideoView
 
 class MainActivity : AppCompatActivity() {
 
@@ -41,13 +43,26 @@ class MainActivity : AppCompatActivity() {
 
     private fun setOnClickListeners(context: Context) {
         buttonPlay.setOnClickListener {
+            val videoView = findViewById<VideoView>(R.id.videoView)
+            val videoPath = "android.resource://" + packageName + "/" + R.raw.cassette
+            val uri = Uri.parse(videoPath)
+            videoView.setVideoURI(uri)
+            videoView.setOnPreparedListener { mediaPlayer ->
+                mediaPlayer.setLooping(true)
+            }
             mediaPlayer.start()
+            videoView.start()
             Toast.makeText(context, "Reproduciendo radio", Toast.LENGTH_SHORT)
                 .show()
         }
 
         buttonPause.setOnClickListener {
+            val videoView = findViewById<VideoView>(R.id.videoView)
+            val videoPath = "android.resource://" + packageName + "/" + R.raw.cassette
+            val uri = Uri.parse(videoPath)
+            videoView.setVideoURI(uri)
             mediaPlayer.pause()
+            videoView.stopPlayback()
             Toast.makeText(context, "En Pausa...", Toast.LENGTH_SHORT).show()
         }
     }
