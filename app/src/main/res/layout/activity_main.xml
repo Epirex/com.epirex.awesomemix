@@ -2,38 +2,32 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:background="@color/black"
+    android:layout_width="wrap_content"
     android:layout_height="match_parent"
+    android:background="@color/black"
     tools:context=".MainActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:layout_gravity="top">
+        android:layout_gravity="top"
+        android:orientation="vertical">
 
         <VideoView
             android:id="@+id/videoView"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="250dp" />
 
         <Button
             android:id="@+id/buttonPlay"
-            android:layout_width="379dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="12dp"
-            android:layout_marginLeft="13dp"
-
             android:text="Play" />
 
         <Button
             android:id="@+id/buttonPause"
-            android:layout_width="379dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="12dp"
-            android:layout_marginLeft="13dp"
-
             android:gravity="center"
             android:text="Pause" />
 

@@ -28,7 +28,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun awesomeStart() {
         val url =
-            "https://26493.live.streamtheworld.com/DISNEY_ARG_BA.mp3"
+            "https://stream.zeno.fm/0c5xvhqhedsvv"
 
         mediaPlayer = MediaPlayer()
 
