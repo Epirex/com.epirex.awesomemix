@@ -5,13 +5,9 @@
     android:layout_width="wrap_content"
     android:layout_height="match_parent"
     android:background="@color/black"
+    android:layout_gravity="top"
+    android:orientation="vertical"
     tools:context=".MainActivity">
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_gravity="top"
-        android:orientation="vertical">
 
         <VideoView
             android:id="@+id/videoView"
@@ -29,8 +25,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="Pause" />
-
-    </LinearLayout>
+            android:text="Pausa" />
 
 </LinearLayout>
