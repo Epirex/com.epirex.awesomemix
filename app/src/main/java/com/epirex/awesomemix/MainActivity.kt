@@ -22,6 +22,11 @@ class MainActivity : AppCompatActivity() {
         awesomeStart(buttonPlay, buttonPause)
     }
 
+    override fun onDestroy() {
+        super.onDestroy()
+        mediaPlayer.release()
+    }
+
     private fun awesomeStart(buttonPlay: Button, buttonPause: Button) {
         val url = "https://stream.zeno.fm/0c5xvhqhedsvv"
         mediaPlayer = MediaPlayer()
@@ -51,7 +56,6 @@ class MainActivity : AppCompatActivity() {
                 Toast.makeText(this, "En Pausa...", Toast.LENGTH_SHORT).show()
             }
         }
-
         mediaPlayer.prepareAsync()
     }
 }
