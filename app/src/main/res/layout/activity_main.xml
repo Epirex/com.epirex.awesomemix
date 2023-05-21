@@ -20,19 +20,13 @@
             android:layout_height="wrap_content"
             android:gravity="center">
 
-            <Button
-                android:id="@+id/buttonPlay"
-                android:layout_width="118dp"
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/buttonPlayer"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Play"
-                android:textSize="25sp" />
-
-                        <Button
-                            android:id="@+id/buttonPause"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Pausa"
-                            android:textSize="25sp" />
+                android:layout_centerInParent="true"
+                android:src="@drawable/ic_play"
+                android:layout_margin="16dp" />
 
         </LinearLayout>
 </androidx.appcompat.widget.LinearLayoutCompat>
