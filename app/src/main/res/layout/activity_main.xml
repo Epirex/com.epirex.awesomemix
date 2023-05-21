@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="wrap_content"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_gravity="top"
     android:orientation="vertical"
@@ -12,19 +12,27 @@
             android:id="@+id/imageView"
             android:layout_width="match_parent"
             android:layout_height="273dp"
-            android:src="@drawable/awesomemixstatitc4" />
+            android:src="@drawable/cassete"
+            tools:ignore="MissingConstraints" />
 
-        <Button
-            android:id="@+id/buttonPlay"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Play" />
+            android:gravity="center">
 
-        <Button
-            android:id="@+id/buttonPause"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:text="Pausa" />
+            <Button
+                android:id="@+id/buttonPlay"
+                android:layout_width="118dp"
+                android:layout_height="wrap_content"
+                android:text="Play"
+                android:textSize="25sp" />
 
-</LinearLayout>
+                        <Button
+                            android:id="@+id/buttonPause"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Pausa"
+                            android:textSize="25sp" />
+
+        </LinearLayout>
+</androidx.appcompat.widget.LinearLayoutCompat>
